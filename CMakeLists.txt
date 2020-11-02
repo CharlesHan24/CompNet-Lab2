@@ -1,14 +1,17 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.0)
 
-project(user_space_protocol_stack)
+project(protocol_stack)
 
-set(lib_name "user_space_protocol_stack")
+set(lib_name "protocol_stack")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED 14)
 set(CMAKE_CXX_FLAGS "-g -fpermissive -lpcap -lpthread")
 
-file(GLOB headers "include/*.h")
+file(GLOB includes "include/*.h")
 file(GLOB sources "src/*.cc")
 
 set(utils_root "${PROJECT_SOURCE_DIR}/cmake")
@@ -18,8 +21,9 @@ foreach(util IN LISTS cmake_utils)
 endforeach(util IN LISTS cmake_utils)
 
 include_directories("include/" "/usr/include/pcap/")
+include(FindPCAP.cmake)
 
-
-add_library(${lib_name} SHARED ${headers} ${sources})
+find_package(Threads REQUIRED)
+add_library(${lib_name} SHARED ${includes} ${sources})
 
 add_subdirectory(test_scripts)

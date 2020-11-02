@@ -1,14 +1,8 @@
-# include_directories(${PCAP_INCLUDE_DIRS})
+file(GLOB test_scripts "*.cpp")
 
-# add_executable(eth_tests eth_tests.cpp)
-# target_link_libraries(eth_tests LINK_PUBLIC ${lib_name})
-# message(STATUS ${lib_name})
-
-file(GLOB tests_src "*.cpp")
-
-foreach(test_src IN LISTS tests_src)
-    get_filename_component(test_name ${test_src} NAME_WE)
+foreach(test_script IN LISTS test_scripts)
+    get_filename_component(file_name ${test_script} NAME_WE)
     set(CMAKE_CXX_FLAGS "-g -fpermissive -lpcap -lpthread")
-    add_executable(${test_name} ${test_src})
-    target_link_libraries(${test_name} LINK_PUBLIC ${lib_name} "/usr/lib/x86_64-linux-gnu/libpcap.so.1.8.1" "/usr/lib/x86_64-linux-gnu/libpthread.so")
-endforeach(test_src IN LISTS tests_src)
+    add_executable(${file_name} ${test_script})
+    target_link_libraries(${file_name} LINK_PUBLIC ${lib_name} ${PCAP_LIBRARY} ${CMAKE_THREAD_LIBS_INIT})
+endforeach(test_script IN LISTS tests_scripts)

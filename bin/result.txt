@@ -1,0 +1,619 @@
+The target device's MAC address is 00:00:00:00:00:00
+Found a new device: (lo, 1)
+Sending frame to 00:00:00:00:00:00
+Successfully read a packet on device lo
+Address: 00:00:0f:85:05:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 68
+Successfully read a packet on device lo
+Address: 00:00:12:99:08:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:27:99:08:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:e7:42:09:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 360
+Successfully read a packet on device lo
+Address: 00:00:ec:42:09:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:76:46:09:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:7f:46:09:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:a5:5a:0b:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 167
+Successfully read a packet on device lo
+Address: 00:00:e4:5c:0b:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:13:5d:0b:00 -> fb:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:98:6f:09:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 32834
+Successfully read a packet on device lo
+Address: 00:00:ae:6f:09:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:a5:70:09:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 13116
+Successfully read a packet on device lo
+Address: 00:00:b4:70:09:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:57:5b:0a:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 1752
+Successfully read a packet on device lo
+Address: 00:00:89:5b:0a:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:e4:c9:0b:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 288
+Successfully read a packet on device lo
+Address: 00:00:57:ca:0b:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:33:f4:0e:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 105
+Successfully read a packet on device lo
+Address: 00:00:ab:f4:0e:00 -> fc:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:d3:7c:00:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:8c:1e:01:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:b4:29:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 174
+Successfully read a packet on device lo
+Address: 00:00:bb:29:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:09:2a:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 1868
+Successfully read a packet on device lo
+Address: 00:00:0d:2a:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:47:2e:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 1087
+Successfully read a packet on device lo
+Address: 00:00:93:2e:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:f0:2e:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 143
+Successfully read a packet on device lo
+Address: 00:00:0f:2f:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:a7:35:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 84
+Successfully read a packet on device lo
+Address: 00:00:6d:46:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 84
+Successfully read a packet on device lo
+Address: 00:00:b7:46:02:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:96:47:05:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 428
+Successfully read a packet on device lo
+Address: 00:00:b4:4a:05:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 296
+Successfully read a packet on device lo
+Address: 00:00:fd:b1:05:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:d4:1e:06:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 252
+Successfully read a packet on device lo
+Address: 00:00:df:1e:06:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:b4:4e:06:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:cf:08:0a:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:e2:08:0a:00 -> fd:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:79:51:04:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 396
+Successfully read a packet on device lo
+Address: 00:00:8b:51:04:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:d3:54:04:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:f1:f6:04:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:89:0f:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 252
+Successfully read a packet on device lo
+Address: 00:00:8f:0f:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:a6:0f:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 152
+Successfully read a packet on device lo
+Address: 00:00:33:12:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 108
+Successfully read a packet on device lo
+Address: 00:00:45:12:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:40:13:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 829
+Successfully read a packet on device lo
+Address: 00:00:53:13:0f:00 -> fe:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:c6:7e:0e:00 -> ff:b6:9f:5f:00:00
+Device: lo
+Payload length: 120
+Successfully read a packet on device lo
+Address: 00:00:61:81:0e:00 -> ff:b6:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:77:81:0e:00 -> ff:b6:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:b9:b6:0d:00 -> 02:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:d0:b6:0d:00 -> 02:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:72:5d:0e:00 -> 02:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:75:5d:0e:00 -> 02:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:f4:40:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 450
+Successfully read a packet on device lo
+Address: 00:00:f9:40:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:14:41:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 174
+Successfully read a packet on device lo
+Address: 00:00:17:41:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:4b:44:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 170
+Successfully read a packet on device lo
+Address: 00:00:5c:44:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:1c:63:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 32834
+Successfully read a packet on device lo
+Address: 00:00:46:63:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:6f:64:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 13189
+Successfully read a packet on device lo
+Address: 00:00:7f:64:06:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:c9:3b:07:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 1692
+Successfully read a packet on device lo
+Address: 00:00:fc:3b:07:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:50:45:07:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 252
+Successfully read a packet on device lo
+Address: 00:00:5a:45:07:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:2b:9b:08:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 248
+Successfully read a packet on device lo
+Address: 00:00:4c:9b:08:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 152
+Successfully read a packet on device lo
+Address: 00:00:2e:9e:08:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 108
+Successfully read a packet on device lo
+Address: 00:00:54:9e:08:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:cb:9e:08:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 821
+Successfully read a packet on device lo
+Address: 00:00:e3:9e:08:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:9d:68:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 138
+Successfully read a packet on device lo
+Address: 00:00:45:6b:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 108
+Successfully read a packet on device lo
+Address: 00:00:88:6b:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:b3:73:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 261
+Successfully read a packet on device lo
+Address: 00:00:cb:73:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 155
+Successfully read a packet on device lo
+Address: 00:00:ea:75:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 108
+Successfully read a packet on device lo
+Address: 00:00:12:76:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 172
+Successfully read a packet on device lo
+Address: 00:00:1b:76:09:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:8c:17:0a:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:36:d4:0b:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 106
+Successfully read a packet on device lo
+Address: 00:00:ac:d4:0b:00 -> 03:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:f6:48:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 515
+Successfully read a packet on device lo
+Address: 00:00:18:49:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 367
+Successfully read a packet on device lo
+Address: 00:00:b1:4c:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 192
+Successfully read a packet on device lo
+Address: 00:00:be:4c:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:d4:4d:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 935
+Successfully read a packet on device lo
+Address: 00:00:f2:4d:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:db:4e:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 877
+Successfully read a packet on device lo
+Address: 00:00:e1:4e:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:a7:5c:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 414
+Successfully read a packet on device lo
+Address: 00:00:a9:60:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:0a:62:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 120
+Successfully read a packet on device lo
+Address: 00:00:59:ff:00:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:b8:38:08:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 1853
+Successfully read a packet on device lo
+Address: 00:00:d1:38:08:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:d2:3c:08:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 1051
+Successfully read a packet on device lo
+Address: 00:00:f8:de:08:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:dc:29:09:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 252
+Successfully read a packet on device lo
+Address: 00:00:ff:29:09:00 -> 04:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:10:fc:00:00 -> 05:b7:9f:5f:00:00
+Device: lo
+Payload length: 360
+Successfully read a packet on device lo
+Address: 00:00:52:ff:00:00 -> 05:b7:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:9f:ff:00:00 -> 05:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:0f:6f:01:00 -> 07:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:9c:18:02:00 -> 07:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:a8:7d:09:00 -> 07:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:75:27:0a:00 -> 07:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:c1:66:07:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 32834
+Successfully read a packet on device lo
+Address: 00:00:d8:66:07:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:f1:66:07:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 13117
+Successfully read a packet on device lo
+Address: 00:00:29:68:07:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:3d:54:08:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 1692
+Successfully read a packet on device lo
+Address: 00:00:87:54:08:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:13:f2:0c:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 106
+Successfully read a packet on device lo
+Address: 00:00:1e:f2:0c:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:ca:d1:0d:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:d2:d1:0d:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:9f:ad:0e:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 138
+Successfully read a packet on device lo
+Address: 00:00:a9:ad:0e:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:06:b1:0e:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 1817
+Successfully read a packet on device lo
+Address: 00:00:0e:b1:0e:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:ba:b3:0e:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 1051
+Successfully read a packet on device lo
+Address: 00:00:e9:b3:0e:00 -> 08:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:47:95:03:00 -> 09:b7:9f:5f:00:00
+Device: lo
+Payload length: 84
+Successfully read a packet on device lo
+Address: 00:00:d1:97:03:00 -> 09:b7:9f:5f:00:00
+Device: lo
+Payload length: 84
+Successfully read a packet on device lo
+Address: 00:00:f9:97:03:00 -> 09:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:0e:43:09:00 -> 09:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:28:43:09:00 -> 09:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:9f:a8:03:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:b6:a8:03:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:aa:a6:04:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 252
+Successfully read a packet on device lo
+Address: 00:00:bc:a6:04:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:15:37:05:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:53:e1:05:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:73:db:0a:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 360
+Successfully read a packet on device lo
+Address: 00:00:89:db:0a:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:73:df:0a:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:7b:df:0a:00 -> 0b:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:9f:b7:00:00 -> 0c:b7:9f:5f:00:00
+Device: lo
+Payload length: 120
+Successfully read a packet on device lo
+Address: 00:00:b7:b9:00:00 -> 0c:b7:9f:5f:00:00
+Device: lo
+Payload length: 102
+Successfully read a packet on device lo
+Address: 00:00:cc:b9:00:00 -> 0c:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:9c:23:05:00 -> 0c:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:b1:23:05:00 -> 0c:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:0f:9e:06:00 -> 0e:b7:9f:5f:00:00
+Device: lo
+Payload length: 79
+Successfully read a packet on device lo
+Address: 00:00:17:9e:06:00 -> 0e:b7:9f:5f:00:00
+Device: lo
+Payload length: 66
+Successfully read a packet on device lo
+Address: 00:00:8b:c3:04:00 -> 0f:b7:9f:5f:00:00
+Device: lo
+Payload length: 79

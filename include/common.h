@@ -48,9 +48,10 @@ typedef ipv4_addr ipv4_addr_t;
  */
 void gen_mac_str(const unsigned char* mac_addr, char* display_mac_str);
 
-
+// Big / Little endian reversion on uint16_t.
 #define ENDIAN_REV16(X) (((((uint16_t)X) >> 8) & 0x00ff) | (((uint16_t)X & 0x00ff) << 8))
 
+// Debug mode or not
 #define DEBUG_MODE
 
 #endif
