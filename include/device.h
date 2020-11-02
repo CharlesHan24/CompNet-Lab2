@@ -1,8 +1,3 @@
-/** 
- * @file device.h
- * @brief Library supporting network device management.
- */
-
 #ifndef _DEVICE_H
 #define _DEVICE_H
 
@@ -16,12 +11,16 @@
 
 namespace Device{
     using std::string;
+
+    /**
+     * Definition of a device type.
+     */
     struct device_t{
         pcap_if_t* dev_info;
         string dev_name;
         eth_addr_t ethernet_addr;
         ipv4_addr_t ipv4_addr;
-        pcap_t* pcap_itfc;
+        pcap_t* pcap_itfc;   // pointer to the pcap interface
         volatile int quit_flag;
 
         int dev_id;
@@ -30,9 +29,21 @@ namespace Device{
 
         ~device_t ();
 
+        /**
+         * Start sniffing packets from pcap_itfc on the device.
+         * This function should loop forever unless the device_t instance has been deleted.
+         */
         void sniffing();
-        int launch();
 
+        /**
+         * Launch the device and start sniffing packets from the device.
+         * This function will try opening the device and if successful, launch 
+         * another thread to sniff packets. The main thread should exit without blocking.
+         * 
+         * @return
+         *     -1 on any error launching and 0 on success.
+         */
+        int launch();
     };
 
 
@@ -53,8 +64,25 @@ namespace Device{
      */
     int findDevice(const char* device);
 
+    /**
+     * Find a device according to device id, and return a device_t instance corresponding to the device id
+     *
+     * @param dev_id
+     *     ID of the network device.
+     * @return
+     *     NULL if the device has not been added, and a device_t* if the corresponding device has been found.
+     */
     device_t* find_device_inst(int dev_id);
 
+    /**
+     * Delete a device and terminate the capture process on the device
+     * 
+     * @param dev_id
+     *     ID of the network device to be deleted.
+     * @return
+     *     -1 on error deleting the device or no corresponding device is found.
+     *     0 on success.
+     */
     int del_device(int dev_id);
 }
 

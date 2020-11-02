@@ -40,6 +40,17 @@ namespace Packet_IO{
      */
     int setFrameReceiveCallback(frameReceiveCallback callback);
 
+    /**
+     * An example callback function for debugging on Layer 2.
+     * The callback function simply print the info of the frame and exit, instead
+     * of performing Layer 3 / Layer 4 tasks.
+     * 
+     * @param buf Pointer to the frame.
+     * @param len Length of the frame.
+     * @param dev_id ID of the device (returned by `addDevice`) receiving current 
+     * frame.
+     * @return 0 on success, -1 on error.
+     */
     int eth_debug_callback(const void* buf, int len, int dev_id);
 }
 
