@@ -73,7 +73,7 @@ namespace Packet_IO{
             return -1;
         }
 
-        printf("Address: %s -> %s\nDevice: %s\n", src_addr, dst_addr, cur_device->dev_name);
+        fprintf(log_stream, "Address: %s -> %s\nDevice: %s\nPayload length: %d\n", src_addr, dst_addr, cur_device->dev_name.c_str(), len);
         return 0;
     }
 }

@@ -6,7 +6,7 @@ set(lib_name "user_space_protocol_stack")
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED 14)
-set (CMAKE_CXX_FLAGS "-g -fpermissive -lpcap -lpthread")
+set(CMAKE_CXX_FLAGS "-g -fpermissive -lpcap -lpthread")
 
 file(GLOB headers "include/*.h")
 file(GLOB sources "src/*.cc")
@@ -17,7 +17,8 @@ foreach(util IN LISTS cmake_utils)
     include(${util})
 endforeach(util IN LISTS cmake_utils)
 
-include_directories("include/")
+include_directories("include/" "/usr/include/pcap/")
+
 
 add_library(${lib_name} SHARED ${headers} ${sources})
 

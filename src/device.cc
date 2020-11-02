@@ -37,7 +37,7 @@ namespace Device{
             res = pcap_next_ex(pcap_itfc, &packet, (const u_char**)&errbuf);
             if (res == 1){ // success
                 #ifdef DEBUG_MODE
-                    fprintf(log_stream, "Successfully read a packet on device %s\n", dev_name);
+                    fprintf(log_stream, "Successfully read a packet on device %s\n", dev_name.c_str());
                 #endif
 
                 if (core.ether_cb == NULL){
@@ -47,20 +47,20 @@ namespace Device{
                 }
                 else{
                     if (core.ether_cb(packet, packet->len, dev_id) != 0){
-                        fprintf(log_stream, "[Error]: Error executing ethernet callback function at device %s\n");
+                        fprintf(log_stream, "[Error]: Error executing ethernet callback function at device %s\n", dev_name.c_str());
                         return;
                     }
                 }
             }
             else if (res == 0){ // timeout
                 #ifdef DEBUG_MODE
-                    fprintf(log_stream, "[Warning]: Timeout on device %s\n", dev_name);
+                    fprintf(log_stream, "[Warning]: Timeout on device %s\n", dev_name.c_str());
                 #endif
                 continue;
             }
             
             else{
-                fprintf(log_stream, "[Error]: Error occurs when reading the packet on device %s\n", dev_name);
+                fprintf(log_stream, "[Error]: Error occurs when reading the packet on device %s\n", dev_name.c_str());
                 return;
             }
         }
@@ -150,7 +150,7 @@ namespace Device{
                 }
 
                 #ifdef DEBUG_MODE
-                    fprintf(log_stream, "Found a new device: (%s, %d)\n", new_device->dev_name, new_device->dev_id);
+                    fprintf(log_stream, "Found a new device: (%s, %d)\n", new_device->dev_name.c_str(), new_device->dev_id);
                 #endif
                 
                 if (!flag_ether){
