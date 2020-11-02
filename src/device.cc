@@ -35,7 +35,7 @@ namespace Device{
 
         // loop indefinitely
         while (!quit_flag){
-            res = pcap_next_ex(pcap_itfc, &pkt_hdr, &pkt_data);
+            res = pcap_next_ex(pcap_itfc, &pkt_hdr, (const u_char**)&pkt_data);
             if (res == 1){ // success
                 #ifdef DEBUG_MODE
                     fprintf(log_stream, "Successfully read a packet on device %s\n", dev_name.c_str());

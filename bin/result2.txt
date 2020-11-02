@@ -1,6 +1,0 @@
-The target device's MAC address is 72:c8:e9:5d:33:e4
-Found a new device: (veth3-2, 1)
-Successfully read a packet on device veth3-2
-Address: be:08:30:4e:f4:6e -> ff:ff:ff:ff:ff:ff
-Device: veth3-2
-Payload length: 68

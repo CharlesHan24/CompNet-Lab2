@@ -14,11 +14,6 @@ set(CMAKE_CXX_FLAGS "-g -fpermissive -lpcap -lpthread")
 file(GLOB includes "include/*.h")
 file(GLOB sources "src/*.cc")
 
-set(utils_root "${PROJECT_SOURCE_DIR}/cmake")
-file(GLOB cmake_utils "${utils_root}/*.cmake")
-foreach(util IN LISTS cmake_utils)
-    include(${util})
-endforeach(util IN LISTS cmake_utils)
 
 include_directories("include/" "/usr/include/pcap/")
 include(FindPCAP.cmake)
