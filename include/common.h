@@ -17,7 +17,7 @@ typedef eth_addr eth_addr_t;
  * Ethernet header type.
  * Never do struct aligning.
  */
-struct __attribute__((packed)) eth_hdr{
+struct __attribute__((__packed__)) eth_hdr{
     eth_addr_t dst_mac;
     eth_addr_t src_mac;
     uint16_t eth_type;
