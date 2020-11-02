@@ -15,6 +15,7 @@ namespace Packet_IO{
         char mac_addr_display[100];
         char errbuf[PCAP_ERRBUF_SIZE];
 
+
         if ((buf == NULL) || (destmac == NULL)){
             fprintf(log_stream, "[Error]: No buf or destmac specified\n");
             return -1;
@@ -42,6 +43,12 @@ namespace Packet_IO{
         memcpy(frame_buf, &ethernet_header, sizeof(eth_hdr_t)
         );
         memcpy(frame_buf + sizeof(eth_hdr_t), buf, len);
+        #ifdef DEBUG_MODE
+            for (int i = 0; i < 68; i++){
+                printf("%c", *(frame_buf + i));
+            }
+            printf("\n");
+        #endif
         // last 4 bits are random: do not compute the checksum
 
 
@@ -62,6 +69,12 @@ namespace Packet_IO{
         char src_addr[100];
         char dst_addr[100];
 
+        #ifdef DEBUG_MODE
+            for (int i = 0; i < 68; i++){
+                printf("%c", *((char*)buf + i));
+            }
+            printf("\n");
+        #endif
         eth_hdr_t* header = (eth_hdr_t*)buf;
         gen_mac_str((unsigned char*)&header->src_mac, src_addr);
         gen_mac_str((unsigned char*)&header->dst_mac, dst_addr);

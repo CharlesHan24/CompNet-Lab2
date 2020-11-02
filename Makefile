@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /root/CompNet-Lab2
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /root/CompNet-Lab2
+=======
+CMAKE_SOURCE_DIR = /root/Lab2_2020/CompNet-Lab2
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /root/Lab2_2020/CompNet-Lab2
+>>>>>>> f91daa97d12fb8d058aa352e7e4b6efb0a53d183
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,15 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/CompNet-Lab2/CMakeFiles /root/CompNet-Lab2/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/CompNet-Lab2/CMakeFiles 0
-.PHONY : all
-
 # The main clean target
 clean:
 	$(MAKE) -f CMakeFiles/Makefile2 clean
-.PHONY : clean
 
 # The main clean target
 clean/fast: clean
@@ -135,6 +136,19 @@ eth_tests: cmake_check_build_system
 eth_tests/fast:
 	$(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/build
 .PHONY : eth_tests/fast
+
+#=============================================================================
+# Target rules for targets named eth_tests2
+
+# Build rule for target.
+eth_tests2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eth_tests2
+.PHONY : eth_tests2
+
+# fast build rule for target.
+eth_tests2/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
+.PHONY : eth_tests2/fast
 
 src/common.o: src/common.cc.o
 
@@ -254,6 +268,7 @@ help:
 	@echo "... protocol_stack"
 	@echo "... edit_cache"
 	@echo "... eth_tests"
+	@echo "... eth_tests2"
 	@echo "... src/common.o"
 	@echo "... src/common.i"
 	@echo "... src/common.s"

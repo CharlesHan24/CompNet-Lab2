@@ -29,12 +29,13 @@ namespace Device{
 
     void device_t::sniffing(){
         char errbuf[PCAP_ERRBUF_SIZE];
-        pcap_pkthdr* packet;
+        pcap_pkthdr* pkt_hdr;
+        char* pkt_data;
         int res;
 
         // loop indefinitely
         while (!quit_flag){
-            res = pcap_next_ex(pcap_itfc, &packet, (const u_char**)&errbuf);
+            res = pcap_next_ex(pcap_itfc, &pkt_hdr, &pkt_data);
             if (res == 1){ // success
                 #ifdef DEBUG_MODE
                     fprintf(log_stream, "Successfully read a packet on device %s\n", dev_name.c_str());
@@ -46,7 +47,7 @@ namespace Device{
                     #endif
                 }
                 else{
-                    if (core.ether_cb(packet, packet->len, dev_id) != 0){
+                    if (core.ether_cb(pkt_data, pkt_hdr->len, dev_id) != 0){
                         fprintf(log_stream, "[Error]: Error executing ethernet callback function at device %s\n", dev_name.c_str());
                         return;
                     }
