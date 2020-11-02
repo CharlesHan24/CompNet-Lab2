@@ -136,6 +136,19 @@ eth_tests/fast:
 	$(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/build
 .PHONY : eth_tests/fast
 
+#=============================================================================
+# Target rules for targets named eth_tests2
+
+# Build rule for target.
+eth_tests2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eth_tests2
+.PHONY : eth_tests2
+
+# fast build rule for target.
+eth_tests2/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
+.PHONY : eth_tests2/fast
+
 src/common.o: src/common.cc.o
 
 .PHONY : src/common.o
@@ -254,6 +267,7 @@ help:
 	@echo "... protocol_stack"
 	@echo "... edit_cache"
 	@echo "... eth_tests"
+	@echo "... eth_tests2"
 	@echo "... src/common.o"
 	@echo "... src/common.i"
 	@echo "... src/common.s"

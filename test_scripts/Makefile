@@ -125,6 +125,21 @@ eth_tests/fast:
 	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/build
 .PHONY : eth_tests/fast
 
+# Convenience name for target.
+test_scripts/CMakeFiles/eth_tests2.dir/rule:
+	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/eth_tests2.dir/rule
+.PHONY : test_scripts/CMakeFiles/eth_tests2.dir/rule
+
+# Convenience name for target.
+eth_tests2: test_scripts/CMakeFiles/eth_tests2.dir/rule
+
+.PHONY : eth_tests2
+
+# fast build rule for target.
+eth_tests2/fast:
+	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
+.PHONY : eth_tests2/fast
+
 eth_tests.o: eth_tests.cpp.o
 
 .PHONY : eth_tests.o
@@ -152,6 +167,33 @@ eth_tests.cpp.s:
 	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.s
 .PHONY : eth_tests.cpp.s
 
+eth_tests2.o: eth_tests2.cpp.o
+
+.PHONY : eth_tests2.o
+
+# target to build an object file
+eth_tests2.cpp.o:
+	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.o
+.PHONY : eth_tests2.cpp.o
+
+eth_tests2.i: eth_tests2.cpp.i
+
+.PHONY : eth_tests2.i
+
+# target to preprocess a source file
+eth_tests2.cpp.i:
+	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.i
+.PHONY : eth_tests2.cpp.i
+
+eth_tests2.s: eth_tests2.cpp.s
+
+.PHONY : eth_tests2.s
+
+# target to generate assembly for a file
+eth_tests2.cpp.s:
+	cd /root/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.s
+.PHONY : eth_tests2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,11 +201,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... eth_tests"
 	@echo "... edit_cache"
+	@echo "... eth_tests"
+	@echo "... eth_tests2"
 	@echo "... eth_tests.o"
 	@echo "... eth_tests.i"
 	@echo "... eth_tests.s"
+	@echo "... eth_tests2.o"
+	@echo "... eth_tests2.i"
+	@echo "... eth_tests2.s"
 .PHONY : help
 
 

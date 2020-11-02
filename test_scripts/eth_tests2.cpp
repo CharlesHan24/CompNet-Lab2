@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
         return 0;
     }
 
-    FILE* fout = fopen("result.txt", "w");
+    FILE* fout = fopen("result2.txt", "w");
     log_stream = fout;
 
     Packet_IO::setFrameReceiveCallback(Packet_IO::eth_debug_callback);
@@ -28,11 +28,11 @@ int main(int argc, char* argv[]){
 
     Device::device_t* cur_device = Device::find_device_inst(ret_id);
 
-    char payload[100] = "1234567890123456789012345678901234567890";
+    char payload[100];
     int len = 50;
-    if (Packet_IO::sendFrame((void*)payload, len, 0x0800, (void*)ETH_BROADCAST_ADDR.addr, ret_id) == -1){
+    /*if (Packet_IO::sendFrame((void*)payload, len, 0x0800, (void*)&cur_device->ethernet_addr, ret_id) == -1){
         printf("Error\n");
-    }
+    }*/
 
     sleep(20);
     Device::del_device(ret_id);
