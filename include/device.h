@@ -22,13 +22,15 @@ namespace Device{
         eth_addr_t ethernet_addr;
         ipv4_addr_t ipv4_addr;
         pcap_t* pcap_itfc;
+        volatile int quit_flag;
 
         int dev_id;
 
-        device_t () {}
+        device_t ();
 
-        ~device_t () {}
+        ~device_t ();
 
+        void sniffing();
         int launch();
 
     };
@@ -50,6 +52,10 @@ namespace Device{
      * was found.
      */
     int findDevice(const char* device);
+
+    device_t* find_device_inst(int dev_id);
+
+    int del_device(int dev_id);
 }
 
 #endif

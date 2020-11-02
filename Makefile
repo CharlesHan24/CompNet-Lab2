@@ -142,6 +142,46 @@ user_space_protocol_stack/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/build
 .PHONY : user_space_protocol_stack/fast
 
+#=============================================================================
+# Target rules for targets named eth_tests
+
+# Build rule for target.
+eth_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 eth_tests
+.PHONY : eth_tests
+
+# fast build rule for target.
+eth_tests/fast:
+	$(MAKE) $(MAKESILENT) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/build
+.PHONY : eth_tests/fast
+
+src/common.o: src/common.cc.o
+
+.PHONY : src/common.o
+
+# target to build an object file
+src/common.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/common.cc.o
+.PHONY : src/common.cc.o
+
+src/common.i: src/common.cc.i
+
+.PHONY : src/common.i
+
+# target to preprocess a source file
+src/common.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/common.cc.i
+.PHONY : src/common.cc.i
+
+src/common.s: src/common.cc.s
+
+.PHONY : src/common.s
+
+# target to generate assembly for a file
+src/common.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/common.cc.s
+.PHONY : src/common.cc.s
+
 src/device.o: src/device.cc.o
 
 .PHONY : src/device.o
@@ -169,6 +209,60 @@ src/device.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/device.cc.s
 .PHONY : src/device.cc.s
 
+src/kernel.o: src/kernel.cc.o
+
+.PHONY : src/kernel.o
+
+# target to build an object file
+src/kernel.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/kernel.cc.o
+.PHONY : src/kernel.cc.o
+
+src/kernel.i: src/kernel.cc.i
+
+.PHONY : src/kernel.i
+
+# target to preprocess a source file
+src/kernel.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/kernel.cc.i
+.PHONY : src/kernel.cc.i
+
+src/kernel.s: src/kernel.cc.s
+
+.PHONY : src/kernel.s
+
+# target to generate assembly for a file
+src/kernel.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/kernel.cc.s
+.PHONY : src/kernel.cc.s
+
+src/packetio.o: src/packetio.cc.o
+
+.PHONY : src/packetio.o
+
+# target to build an object file
+src/packetio.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/packetio.cc.o
+.PHONY : src/packetio.cc.o
+
+src/packetio.i: src/packetio.cc.i
+
+.PHONY : src/packetio.i
+
+# target to preprocess a source file
+src/packetio.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/packetio.cc.i
+.PHONY : src/packetio.cc.i
+
+src/packetio.s: src/packetio.cc.s
+
+.PHONY : src/packetio.s
+
+# target to generate assembly for a file
+src/packetio.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/user_space_protocol_stack.dir/build.make CMakeFiles/user_space_protocol_stack.dir/src/packetio.cc.s
+.PHONY : src/packetio.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -177,10 +271,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... eth_tests"
 	@echo "... user_space_protocol_stack"
+	@echo "... src/common.o"
+	@echo "... src/common.i"
+	@echo "... src/common.s"
 	@echo "... src/device.o"
 	@echo "... src/device.i"
 	@echo "... src/device.s"
+	@echo "... src/kernel.o"
+	@echo "... src/kernel.i"
+	@echo "... src/kernel.s"
+	@echo "... src/packetio.o"
+	@echo "... src/packetio.i"
+	@echo "... src/packetio.s"
 .PHONY : help
 
 

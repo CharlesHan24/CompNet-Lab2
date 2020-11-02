@@ -6,43 +6,100 @@
 #include <netinet/ether.h> 
 #include <linux/if_packet.h>
 #include <netinet/ip.h>
+#include <thread>
 
+extern Kernel::kernel_t core;
+extern FILE* log_stream;
 
 namespace Device{
-    using Kernel::core;
     using std::string;
+    using std::thread;
 
-    int device_t::launch(){
+    device_t::device_t(){
+        quit_flag = 0;
+    }
+
+    device_t::~device_t(){
+        quit_flag = 1;
+        if (pcap_itfc != NULL){
+            pcap_close(pcap_itfc);
+        }
+        delete(dev_info);
+    }
+
+    void device_t::sniffing(){
+        char errbuf[PCAP_ERRBUF_SIZE];
+        pcap_pkthdr* packet;
+        int res;
+
+        // loop indefinitely
+        while (!quit_flag){
+            res = pcap_next_ex(pcap_itfc, &packet, (const u_char**)&errbuf);
+            if (res == 1){ // success
+                #ifdef DEBUG_MODE
+                    fprintf(log_stream, "Successfully read a packet on device %s\n", dev_name);
+                #endif
+
+                if (core.ether_cb == NULL){
+                    #ifdef DEBUG_MODE
+                        fprintf(log_stream, "[Warning]: No ethernet callback function is registered, and the packet will be simply dropped");
+                    #endif
+                }
+                else{
+                    if (core.ether_cb(packet, packet->len, dev_id) != 0){
+                        fprintf(log_stream, "[Error]: Error executing ethernet callback function at device %s\n");
+                        return;
+                    }
+                }
+            }
+            else if (res == 0){ // timeout
+                #ifdef DEBUG_MODE
+                    fprintf(log_stream, "[Warning]: Timeout on device %s\n", dev_name);
+                #endif
+                continue;
+            }
+            
+            else{
+                fprintf(log_stream, "[Error]: Error occurs when reading the packet on device %s\n", dev_name);
+                return;
+            }
+        }
+    }
+
+    int device_t::launch(){ // no blocking
         char errbuf[PCAP_ERRBUF_SIZE];
         pcap_itfc = pcap_open_live(dev_name.c_str(), PCAP_BUF_SIZE, 0, PCAP_TIMEOUT, errbuf);
         if (pcap_itfc == NULL){
-            fprintf(stderr, "[Error]: Cannot capture on device %s\n", dev_name.c_str());
+            fprintf(log_stream, "[Error]: Cannot capture on device %s\n", dev_name.c_str());
             return -1;
         }
 
         /*Reference: https://www.tcpdump.org/pcap.html*/
         if (pcap_datalink(pcap_itfc) != DLT_EN10MB) {
-            fprintf(stderr, "[Error]: Device %s doesn't provide Ethernet headers - not supported\n", dev_name.c_str());
+            fprintf(log_stream, "[Error]: Device %s doesn't provide Ethernet headers - not supported\n", dev_name.c_str());
             return -1;
         }
 
         // launch asynchronously
-        
+        thread sniff_th(&device_t::sniffing, this);
+        sniff_th.detach();
+        return 0;
     }
 
     int addDevice(const char* device){
         char errbuf[PCAP_ERRBUF_SIZE];
+        char mac_addr_display[100];
         int ret = -1;
         pcap_if_t* all_devs;
 
         int res = pcap_findalldevs(&all_devs, errbuf);
         if (res != 0){
-            fprintf(stderr, "[Error]: No device found\n");
+            fprintf(log_stream, "[Error]: No device found\n");
             return -1;
         }
 
         if (device == NULL){
-            fprintf(stderr, "[Error]: Invalid device name\n");
+            fprintf(log_stream, "[Error]: Invalid device name\n");
             return -1;
         }
 
@@ -60,18 +117,20 @@ namespace Device{
                 for (pcap_addr_t* cur_addr = cur_dev->addresses; cur_addr != NULL; cur_addr = cur_addr->next){
                     if (cur_addr->addr->sa_family == AF_PACKET){ // ethernet address
                         if (flag_ether == 1){
-                            fprintf(stderr, "[Error]: Multiple MAC addresses on a single device\n");
+                            fprintf(log_stream, "[Error]: Multiple MAC addresses on a single device\n");
                             return -1;
                         }
                         
                         sockaddr_ll* phy_addr = (sockaddr_ll*)cur_addr->addr;
 
                         if (phy_addr->sll_halen != 6){
-                            fprintf(stderr, "[Error]: Unexpected MAC address length\n");
+                            fprintf(log_stream, "[Error]: Unexpected MAC address length\n");
                             return -1;
                         }
 
                         memcpy(&new_device->ethernet_addr, phy_addr->sll_addr, sizeof(eth_addr_t));
+                        gen_mac_str((unsigned char*)&new_device->ethernet_addr, mac_addr_display);
+                        fprintf(log_stream, "The target device's MAC address is %s\n", mac_addr_display);
 
                         flag_ether = 1;
                     }
@@ -79,7 +138,7 @@ namespace Device{
 
                     else if (cur_addr->addr->sa_family == AF_INET){ // ipv4
                         if (flag_ipv4 == 1){
-                            fprintf(stderr, "[Error]: Multiple ipv4 addresses on a single device\n");
+                            fprintf(log_stream, "[Error]: Multiple ipv4 addresses on a single device\n");
                             return -1;
                         }
 
@@ -91,11 +150,11 @@ namespace Device{
                 }
 
                 #ifdef DEBUG_MODE
-                    printf("Found a new device: (%s, %d)\n", new_device->dev_name, new_device->dev_id);
+                    fprintf(log_stream, "Found a new device: (%s, %d)\n", new_device->dev_name, new_device->dev_id);
                 #endif
                 
                 if (!flag_ether){
-                    fprintf(stderr, "Cannot found the MAC address\n");
+                    fprintf(log_stream, "Cannot found the MAC address\n");
                     return -1;
                 }
 
@@ -106,7 +165,7 @@ namespace Device{
                 }
                 else{
                     delete(new_device);
-                    fprintf(stderr, "[Error]: Failed to launch this device\n");
+                    fprintf(log_stream, "[Error]: Failed to launch this device\n");
                     return -1;
                 }
             }
@@ -123,5 +182,33 @@ namespace Device{
             }
         }
         return -1;
+    }
+
+    device_t* find_device_inst(int dev_id){
+        int dev_cnt = core.devices.size();
+        for (int i = 0; i < dev_cnt; i++){
+            if (core.devices[i]->dev_id == dev_id){
+                return core.devices[i];
+            }
+        }
+        return NULL;
+    }
+
+    int del_device(int dev_id){
+        int dev_cnt = core.devices.size();
+        int ret = -1;
+
+        for (int i = 0; i < dev_cnt; i++){
+            if (core.devices[i]->dev_id == dev_id){
+                delete(core.devices[i]);
+                for (int j = i; j < dev_cnt - 1; j++){
+                    core.devices[j] = core.devices[j + 1];
+                }
+                core.devices.pop_back();
+                ret = 0;
+                break;
+            }
+        }
+        return ret;
     }
 }
