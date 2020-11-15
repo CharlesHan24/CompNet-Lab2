@@ -3,14 +3,18 @@
 
 #include "pcap.h"
 #include "common.h"
+#include "arp.h"
 #include <cstdlib>
 #include <string>
+#include <vector>
 
 #define PCAP_TIMEOUT 10 // 10ms
 #define PCAP_BUF_SIZE 102400 // 100KB
 
 namespace Device{
     using std::string;
+    using std::vector;
+    using ARP_lyr::arp_neighbor_info;
 
     /**
      * Definition of a device type.
@@ -19,8 +23,10 @@ namespace Device{
         pcap_if_t* dev_info;
         string dev_name;
         eth_addr_t ethernet_addr;
-        ipv4_addr_t ipv4_addr;
+        vector<ipv4_addr_t> ipv4_addr;
         pcap_t* pcap_itfc;   // pointer to the pcap interface
+
+        multi_th_vector<arp_neighbor_info> neighbor_info;
         volatile int quit_flag;
 
         int dev_id;
@@ -41,7 +47,7 @@ namespace Device{
          * another thread to sniff packets. The main thread should exit without blocking.
          * 
          * @return
-         *     -1 on any error launching and 0 on success.
+         *     -1 on any launching error and 0 on success.
          */
         int launch();
     };

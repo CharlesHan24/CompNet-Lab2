@@ -1,4 +1,4 @@
-# Install script for directory: /root/CompNet-Lab2/test_scripts
+# Install script for directory: /home/charleshan/Lab2_2020/CompNet-Lab2/test_scripts
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

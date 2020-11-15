@@ -1,0 +1,56 @@
+[ETH]: The target device's MAC address is 4e:2e:15:c7:71:34
+[ETH]: Found a new device: (veth2-1, 1)
+[ETH]: The target device's MAC address is e2:91:c9:af:03:0f
+[ETH]: Found a new device: (veth2-4, 2)
+[ETH]: Successfully read a packet on device veth2-1
+[ETH]: Address: ea:18:8b:c3:c5:83 -> 4e:2e:15:c7:71:34
+[ETH]: Device: veth2-1
+[ETH]: Payload length: 88
+[IP]: Receiving an IP packet. src=10.100.1.1, dst=10.100.5.2
+[IP]: Destination not reached. Forwarding
+[ARP]: Sending ARP Request
+[ETH]: Sending frame to ff:ff:ff:ff:ff:ff
+[ETH]: Sending frame to ff:ff:ff:ff:ff:ff
+[ETH]: Successfully read a packet on device veth2-1
+[ETH]: Address: ea:18:8b:c3:c5:83 -> 4e:2e:15:c7:71:34
+[ETH]: Device: veth2-1
+[ETH]: Payload length: 34
+[ARP]: Receiving ARP Reply Packet
+[ARP]: ARP Receive success at device 1
+[ETH]: Sending frame to ea:18:8b:c3:c5:83
+[ETH]: Successfully read a packet on device veth2-4
+[ETH]: Address: 12:fb:4c:8e:d9:80 -> e2:91:c9:af:03:0f
+[ETH]: Device: veth2-4
+[ETH]: Payload length: 34
+[ARP]: Receiving ARP Reply Packet
+[ARP]: ARP Receive success at device 2
+[ETH]: Sending frame to 12:fb:4c:8e:d9:80
+[ETH]: Successfully read a packet on device veth2-4
+[ETH]: Address: 12:fb:4c:8e:d9:80 -> ff:ff:ff:ff:ff:ff
+[ETH]: Device: veth2-4
+[ETH]: Payload length: 34
+[ARP]: Receiving ARP Request Packet
+[ETH]: Sending frame to 12:fb:4c:8e:d9:80
+[ETH]: Successfully read a packet on device veth2-4
+[ETH]: Address: 12:fb:4c:8e:d9:80 -> e2:91:c9:af:03:0f
+[ETH]: Device: veth2-4
+[ETH]: Payload length: 88
+[IP]: Receiving an IP packet. src=10.100.1.1, dst=10.100.5.2
+[IP]: Dup IP packet. Dropping this packet
+[ETH]: Successfully read a packet on device veth2-1
+[ETH]: Address: ea:18:8b:c3:c5:83 -> 4e:2e:15:c7:71:34
+[ETH]: Device: veth2-1
+[ETH]: Payload length: 88
+[IP]: Receiving an IP packet. src=10.100.1.1, dst=10.100.5.2
+[IP]: Destination not reached. Forwarding
+[ARP]: Sending ARP Request
+[ARP]: ARP hit at device 1
+[ETH]: Sending frame to ea:18:8b:c3:c5:83
+[ARP]: ARP hit at device 2
+[ETH]: Sending frame to 12:fb:4c:8e:d9:80
+[ETH]: Successfully read a packet on device veth2-4
+[ETH]: Address: 12:fb:4c:8e:d9:80 -> e2:91:c9:af:03:0f
+[ETH]: Device: veth2-4
+[ETH]: Payload length: 88
+[IP]: Receiving an IP packet. src=10.100.1.1, dst=10.100.5.2
+[IP]: Dup IP packet. Dropping this packet

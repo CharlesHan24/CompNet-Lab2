@@ -24,3 +24,8 @@
 
     - https://www.zhihu.com/question/385028195/answer/1130665774
     - Destination mac address只是下一跳的address.
+
+routing algorithm: flooding
+每个节点维护曾经到达的packet. key: hash值, value: 到达的timestamp. 设置一个timeout, 
+
+flooding是mac地址一般不设为broadcast. 通过ARP protocol问出: 对于每个device, 另一端连的若干device的IP, mac地址. 设置一个timeout, 一个device过了timeout后需要重新ARP.

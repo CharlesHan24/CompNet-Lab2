@@ -42,7 +42,7 @@ namespace Packet_IO{
 
     /**
      * An example callback function for debugging on Layer 2.
-     * The callback function simply print the info of the frame and exit, instead
+     * The callback function simply prints the info of the frame and exits, instead
      * of performing Layer 3 / Layer 4 tasks.
      * 
      * @param buf Pointer to the frame.
@@ -52,6 +52,20 @@ namespace Packet_IO{
      * @return 0 on success, -1 on error.
      */
     int eth_debug_callback(const void* buf, int len, int dev_id);
+
+    /**
+     * Default Layer 2 callback function.
+     * The callback function first checks for the validicity of the packet and drops the 
+     * malformed packets. Then it either call the ARP callback function or the IP callback
+     * function, depending on the eth_type information recorded in the ethernet header.
+     * 
+     * @param buf Pointer to the frame.
+     * @param len Length of the frame.
+     * @param dev_id ID of the device (returned by `addDevice`) receiving current 
+     * frame.
+     * @return 0 on success, -1 on error.
+     */
+    int default_eth_rcv_callback(const void* buf, int len, int dev_id);
 }
 
 #endif
