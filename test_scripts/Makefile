@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/charleshan/Lab2_2020/CompNet-Lab2
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -126,19 +126,49 @@ ip_tests2/fast:
 .PHONY : ip_tests2/fast
 
 # Convenience name for target.
-test_scripts/CMakeFiles/ip_tests.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/ip_tests.dir/rule
-.PHONY : test_scripts/CMakeFiles/ip_tests.dir/rule
+test_scripts/CMakeFiles/echo_server_multi.dir/rule:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_server_multi.dir/rule
+.PHONY : test_scripts/CMakeFiles/echo_server_multi.dir/rule
 
 # Convenience name for target.
-ip_tests: test_scripts/CMakeFiles/ip_tests.dir/rule
+echo_server_multi: test_scripts/CMakeFiles/echo_server_multi.dir/rule
 
-.PHONY : ip_tests
+.PHONY : echo_server_multi
 
 # fast build rule for target.
-ip_tests/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/build
-.PHONY : ip_tests/fast
+echo_server_multi/fast:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/build
+.PHONY : echo_server_multi/fast
+
+# Convenience name for target.
+test_scripts/CMakeFiles/echo_client.dir/rule:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_client.dir/rule
+.PHONY : test_scripts/CMakeFiles/echo_client.dir/rule
+
+# Convenience name for target.
+echo_client: test_scripts/CMakeFiles/echo_client.dir/rule
+
+.PHONY : echo_client
+
+# fast build rule for target.
+echo_client/fast:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/build
+.PHONY : echo_client/fast
+
+# Convenience name for target.
+test_scripts/CMakeFiles/echo_server.dir/rule:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_server.dir/rule
+.PHONY : test_scripts/CMakeFiles/echo_server.dir/rule
+
+# Convenience name for target.
+echo_server: test_scripts/CMakeFiles/echo_server.dir/rule
+
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/eth_tests.dir/rule:
@@ -169,6 +199,102 @@ eth_tests2: test_scripts/CMakeFiles/eth_tests2.dir/rule
 eth_tests2/fast:
 	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
 .PHONY : eth_tests2/fast
+
+# Convenience name for target.
+test_scripts/CMakeFiles/ip_tests.dir/rule:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/ip_tests.dir/rule
+.PHONY : test_scripts/CMakeFiles/ip_tests.dir/rule
+
+# Convenience name for target.
+ip_tests: test_scripts/CMakeFiles/ip_tests.dir/rule
+
+.PHONY : ip_tests
+
+# fast build rule for target.
+ip_tests/fast:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/build
+.PHONY : ip_tests/fast
+
+echo_client.o: echo_client.cpp.o
+
+.PHONY : echo_client.o
+
+# target to build an object file
+echo_client.cpp.o:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.o
+.PHONY : echo_client.cpp.o
+
+echo_client.i: echo_client.cpp.i
+
+.PHONY : echo_client.i
+
+# target to preprocess a source file
+echo_client.cpp.i:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.i
+.PHONY : echo_client.cpp.i
+
+echo_client.s: echo_client.cpp.s
+
+.PHONY : echo_client.s
+
+# target to generate assembly for a file
+echo_client.cpp.s:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.s
+.PHONY : echo_client.cpp.s
+
+echo_server.o: echo_server.cpp.o
+
+.PHONY : echo_server.o
+
+# target to build an object file
+echo_server.cpp.o:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.o
+.PHONY : echo_server.cpp.o
+
+echo_server.i: echo_server.cpp.i
+
+.PHONY : echo_server.i
+
+# target to preprocess a source file
+echo_server.cpp.i:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.i
+.PHONY : echo_server.cpp.i
+
+echo_server.s: echo_server.cpp.s
+
+.PHONY : echo_server.s
+
+# target to generate assembly for a file
+echo_server.cpp.s:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.s
+.PHONY : echo_server.cpp.s
+
+echo_server_multi.o: echo_server_multi.cpp.o
+
+.PHONY : echo_server_multi.o
+
+# target to build an object file
+echo_server_multi.cpp.o:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.o
+.PHONY : echo_server_multi.cpp.o
+
+echo_server_multi.i: echo_server_multi.cpp.i
+
+.PHONY : echo_server_multi.i
+
+# target to preprocess a source file
+echo_server_multi.cpp.i:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.i
+.PHONY : echo_server_multi.cpp.i
+
+echo_server_multi.s: echo_server_multi.cpp.s
+
+.PHONY : echo_server_multi.s
+
+# target to generate assembly for a file
+echo_server_multi.cpp.s:
+	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.s
+.PHONY : echo_server_multi.cpp.s
 
 eth_tests.o: eth_tests.cpp.o
 
@@ -284,12 +410,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ip_tests2"
-	@echo "... ip_tests"
+	@echo "... echo_server_multi"
+	@echo "... echo_client"
+	@echo "... rebuild_cache"
+	@echo "... echo_server"
 	@echo "... eth_tests"
 	@echo "... eth_tests2"
+	@echo "... ip_tests"
+	@echo "... echo_client.o"
+	@echo "... echo_client.i"
+	@echo "... echo_client.s"
+	@echo "... echo_server.o"
+	@echo "... echo_server.i"
+	@echo "... echo_server.s"
+	@echo "... echo_server_multi.o"
+	@echo "... echo_server_multi.i"
+	@echo "... echo_server_multi.s"
 	@echo "... eth_tests.o"
 	@echo "... eth_tests.i"
 	@echo "... eth_tests.s"

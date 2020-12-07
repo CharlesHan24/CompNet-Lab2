@@ -13,6 +13,7 @@ namespace Kernel{
         quit_flag = 0;
         ARP_lyr::init();
         IP_lyr::init();
+        TCP_lyr::init();
     }
 
     kernel_t::~kernel_t () {
@@ -23,6 +24,7 @@ namespace Kernel{
         }
         ARP_lyr::exiting();
         IP_lyr::exiting();
+        TCP_lyr::exiting();
     }
     
     void set_log_stream(FILE* redirect){

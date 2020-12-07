@@ -71,6 +71,23 @@ struct __attribute__((packed)) ipv4_hdr{
 };
 typedef ipv4_hdr ipv4_hdr_t;
 
+struct __attribute__((packed)) tcp_hdr{
+    uint16_t src_port;
+    uint16_t dst_port;
+    uint32_t seq_num;
+    uint32_t ack_num;
+    uint8_t data_offset : 4;
+    uint8_t pad1 : 3;
+    uint8_t ns_flag : 1;
+    uint8_t flags;
+    uint16_t win_size;
+    uint16_t csum;
+    uint16_t urg_ptr;
+    uint32_t sd_time;
+    uint32_t rc_time;
+};
+typedef tcp_hdr tcp_hdr_t;
+
 
 /**
  * Generate a hex mac address string for debugging.
@@ -96,8 +113,8 @@ void gen_ipv4_str(const unsigned char* ipv4_addr, char* display_ipv4_addr);
 uint64_t get_time();
 
 // Big / Little endian reversion on uint16_t and uint32_t.
-#define ENDIAN_REV16(X) (((((uint16_t)X) >> 8) & 0x00ff) | (((uint16_t)X & 0x00ff) << 8))
-#define ENDIAN_REV32(X) ((ENDIAN_REV16(X & 0xffff) << 16) | (ENDIAN_REV16((X ^ 0xffff) >> 16)))
+#define ENDIAN_REV16(X) (((((uint16_t)(X)) >> 8) & 0x00ff) | (((uint16_t)(X) & 0x00ff) << 8))
+#define ENDIAN_REV32(X) ((((uint32_t)ENDIAN_REV16(X & 0xffff)) << 16) | (((uint32_t)ENDIAN_REV16((X >> 16)))))
 
 // Debug mode or not
 #define DEBUG_MODE

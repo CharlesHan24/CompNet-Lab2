@@ -72,3 +72,15 @@
 [ETH]: Payload length: 88
 [IP]: Receiving an IP packet. src=10.100.1.1, dst=10.100.5.2
 [IP]: Dup IP packet. Dropping this packet
+[ETH]: Successfully read a packet on device veth4-2
+[ETH]: Successfully read a packet on device veth4-3
+[ETH]: Address: 12:fb:4c:8e:d9:80 -> 33:33:00:00:00:02
+[ETH]: Device: veth4-2
+[ETH]: Payload length: 70
+[ETH]: Address: de:62:87:7e:25:98 -> 33:33:00:00:00:02
+[ETH]: Device: veth4-3
+[ETH]: Payload length: 70
+[ETH]: The target mac destination is incorrect; drop it.
+[Error]: [ETH]: Error executing ethernet callback function at device veth4-2
+[ETH]: The target mac destination is incorrect; drop it.
+[Error]: [ETH]: Error executing ethernet callback function at device veth4-3

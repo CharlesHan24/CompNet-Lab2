@@ -105,16 +105,15 @@ namespace Packet_IO{
         }
         
         if (header->eth_type == ENDIAN_REV16(ETH_TYPE_ARP)){
-            thread arp_cb(core.arp_cb, ip_buf, len - sizeof(eth_hdr_t) - 4, header, dev_id);
-            arp_cb.detach();
+            core.arp_cb(ip_buf, len - sizeof(eth_hdr_t) - 4, header, dev_id);
         }
         else if (header->eth_type == ENDIAN_REV16(ETH_TYPE_IPV4)){
             if (memcmp(&header->dst_mac, &ETH_BROADCAST_ADDR, 6) == 0){
                 fprintf(log_stream, "[Error]: [ETH]: Ethernet broadcast is not allowed when sending IP packets\n");
                 return -1;
             }
-            thread ip_cb(core.ip_cb, ip_buf, len - sizeof(eth_hdr_t) - 4, header, dev_id);
-            ip_cb.detach();
+            core.ip_cb(ip_buf, len - sizeof(eth_hdr_t) - 4, header, dev_id);
+
         }
         else{
             fprintf(log_stream, "[Error]: [ETH]: Ethernet type not supported\n");

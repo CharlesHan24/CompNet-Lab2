@@ -138,7 +138,7 @@ namespace IP_lyr{
             route_table.lock.unlock();
         }
         delete(ip_buf);
-        
+        return 0;
     }
 
     int sendIPPacket(const ipv4_addr_t src, const ipv4_addr_t dst, int proto, const void *buf, int len){
@@ -187,7 +187,7 @@ namespace IP_lyr{
         void* payload = (void*)((uint64_t)buf + sizeof(ipv4_hdr_t));
         len -= sizeof(ipv4_hdr_t);
 
-        if ((len <= 0) || (header->ihl != sizeof(ipv4_hdr_t) / 4) || (len != ENDIAN_REV16(header->len) - sizeof(ipv4_hdr_t))){
+        if ((len <= 0) || (header->ihl != sizeof(ipv4_hdr_t) / 4) || (len != ENDIAN_REV16(header->len) - sizeof(ipv4_hdr_t)) || (header->version != 4)){
             fprintf(log_stream, "[Warning]: [IP]: Malformed IP packet received. Dropping.\n");
             return;
         }

@@ -4,8 +4,8 @@
 #include "common.h"
 #include <cstdint>
 
-#define ARP_NEIGHBOR_TIMEOUT 20 // 20s
-#define ARP_IN_FLIGHT_TIMEOUT 1000 // 1000ms
+#define ARP_NEIGHBOR_TIMEOUT 30 // 30s
+#define ARP_IN_FLIGHT_TIMEOUT 2000 // 2000ms
 namespace ARP_lyr{
     /**
      * Data structure of stored IP payload of in-flight ARP request.
