@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/charleshan/Lab2_2020/CompNet-Lab2
+CMAKE_SOURCE_DIR = /media/data/home/charleshan/Lab2_2020/CompNet-Lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/charleshan/Lab2_2020/CompNet-Lab2
+CMAKE_BINARY_DIR = /media/data/home/charleshan/Lab2_2020/CompNet-Lab2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(CMAKE_COMMAND) -E cmake_progress_start /home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles /home/charleshan/Lab2_2020/CompNet-Lab2/test_scripts/CMakeFiles/progress.marks
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles 0
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(CMAKE_COMMAND) -E cmake_progress_start /media/data/home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles /media/data/home/charleshan/Lab2_2020/CompNet-Lab2/test_scripts/CMakeFiles/progress.marks
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/data/home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/clean
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/preinstall
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/preinstall
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test_scripts/CMakeFiles/ip_tests2.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/ip_tests2.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/ip_tests2.dir/rule
 .PHONY : test_scripts/CMakeFiles/ip_tests2.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ ip_tests2: test_scripts/CMakeFiles/ip_tests2.dir/rule
 
 # fast build rule for target.
 ip_tests2/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/build
 .PHONY : ip_tests2/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/echo_server_multi.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_server_multi.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_server_multi.dir/rule
 .PHONY : test_scripts/CMakeFiles/echo_server_multi.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ echo_server_multi: test_scripts/CMakeFiles/echo_server_multi.dir/rule
 
 # fast build rule for target.
 echo_server_multi/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/build
 .PHONY : echo_server_multi/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/echo_client.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_client.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_client.dir/rule
 .PHONY : test_scripts/CMakeFiles/echo_client.dir/rule
 
 # Convenience name for target.
@@ -152,12 +152,12 @@ echo_client: test_scripts/CMakeFiles/echo_client.dir/rule
 
 # fast build rule for target.
 echo_client/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/build
 .PHONY : echo_client/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/echo_server.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_server.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/echo_server.dir/rule
 .PHONY : test_scripts/CMakeFiles/echo_server.dir/rule
 
 # Convenience name for target.
@@ -167,12 +167,12 @@ echo_server: test_scripts/CMakeFiles/echo_server.dir/rule
 
 # fast build rule for target.
 echo_server/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/build
 .PHONY : echo_server/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/eth_tests.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/eth_tests.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/eth_tests.dir/rule
 .PHONY : test_scripts/CMakeFiles/eth_tests.dir/rule
 
 # Convenience name for target.
@@ -182,12 +182,12 @@ eth_tests: test_scripts/CMakeFiles/eth_tests.dir/rule
 
 # fast build rule for target.
 eth_tests/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/build
 .PHONY : eth_tests/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/eth_tests2.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/eth_tests2.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/eth_tests2.dir/rule
 .PHONY : test_scripts/CMakeFiles/eth_tests2.dir/rule
 
 # Convenience name for target.
@@ -197,12 +197,12 @@ eth_tests2: test_scripts/CMakeFiles/eth_tests2.dir/rule
 
 # fast build rule for target.
 eth_tests2/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
 .PHONY : eth_tests2/fast
 
 # Convenience name for target.
 test_scripts/CMakeFiles/ip_tests.dir/rule:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/ip_tests.dir/rule
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f CMakeFiles/Makefile2 test_scripts/CMakeFiles/ip_tests.dir/rule
 .PHONY : test_scripts/CMakeFiles/ip_tests.dir/rule
 
 # Convenience name for target.
@@ -212,7 +212,7 @@ ip_tests: test_scripts/CMakeFiles/ip_tests.dir/rule
 
 # fast build rule for target.
 ip_tests/fast:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/build
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/build
 .PHONY : ip_tests/fast
 
 echo_client.o: echo_client.cpp.o
@@ -221,7 +221,7 @@ echo_client.o: echo_client.cpp.o
 
 # target to build an object file
 echo_client.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.o
 .PHONY : echo_client.cpp.o
 
 echo_client.i: echo_client.cpp.i
@@ -230,7 +230,7 @@ echo_client.i: echo_client.cpp.i
 
 # target to preprocess a source file
 echo_client.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.i
 .PHONY : echo_client.cpp.i
 
 echo_client.s: echo_client.cpp.s
@@ -239,7 +239,7 @@ echo_client.s: echo_client.cpp.s
 
 # target to generate assembly for a file
 echo_client.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/echo_client.cpp.s
 .PHONY : echo_client.cpp.s
 
 echo_server.o: echo_server.cpp.o
@@ -248,7 +248,7 @@ echo_server.o: echo_server.cpp.o
 
 # target to build an object file
 echo_server.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.o
 .PHONY : echo_server.cpp.o
 
 echo_server.i: echo_server.cpp.i
@@ -257,7 +257,7 @@ echo_server.i: echo_server.cpp.i
 
 # target to preprocess a source file
 echo_server.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.i
 .PHONY : echo_server.cpp.i
 
 echo_server.s: echo_server.cpp.s
@@ -266,7 +266,7 @@ echo_server.s: echo_server.cpp.s
 
 # target to generate assembly for a file
 echo_server.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/echo_server.cpp.s
 .PHONY : echo_server.cpp.s
 
 echo_server_multi.o: echo_server_multi.cpp.o
@@ -275,7 +275,7 @@ echo_server_multi.o: echo_server_multi.cpp.o
 
 # target to build an object file
 echo_server_multi.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.o
 .PHONY : echo_server_multi.cpp.o
 
 echo_server_multi.i: echo_server_multi.cpp.i
@@ -284,7 +284,7 @@ echo_server_multi.i: echo_server_multi.cpp.i
 
 # target to preprocess a source file
 echo_server_multi.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.i
 .PHONY : echo_server_multi.cpp.i
 
 echo_server_multi.s: echo_server_multi.cpp.s
@@ -293,7 +293,7 @@ echo_server_multi.s: echo_server_multi.cpp.s
 
 # target to generate assembly for a file
 echo_server_multi.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/echo_server_multi.cpp.s
 .PHONY : echo_server_multi.cpp.s
 
 eth_tests.o: eth_tests.cpp.o
@@ -302,7 +302,7 @@ eth_tests.o: eth_tests.cpp.o
 
 # target to build an object file
 eth_tests.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.o
 .PHONY : eth_tests.cpp.o
 
 eth_tests.i: eth_tests.cpp.i
@@ -311,7 +311,7 @@ eth_tests.i: eth_tests.cpp.i
 
 # target to preprocess a source file
 eth_tests.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.i
 .PHONY : eth_tests.cpp.i
 
 eth_tests.s: eth_tests.cpp.s
@@ -320,7 +320,7 @@ eth_tests.s: eth_tests.cpp.s
 
 # target to generate assembly for a file
 eth_tests.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests.dir/build.make test_scripts/CMakeFiles/eth_tests.dir/eth_tests.cpp.s
 .PHONY : eth_tests.cpp.s
 
 eth_tests2.o: eth_tests2.cpp.o
@@ -329,7 +329,7 @@ eth_tests2.o: eth_tests2.cpp.o
 
 # target to build an object file
 eth_tests2.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.o
 .PHONY : eth_tests2.cpp.o
 
 eth_tests2.i: eth_tests2.cpp.i
@@ -338,7 +338,7 @@ eth_tests2.i: eth_tests2.cpp.i
 
 # target to preprocess a source file
 eth_tests2.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.i
 .PHONY : eth_tests2.cpp.i
 
 eth_tests2.s: eth_tests2.cpp.s
@@ -347,7 +347,7 @@ eth_tests2.s: eth_tests2.cpp.s
 
 # target to generate assembly for a file
 eth_tests2.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/eth_tests2.cpp.s
 .PHONY : eth_tests2.cpp.s
 
 ip_tests.o: ip_tests.cpp.o
@@ -356,7 +356,7 @@ ip_tests.o: ip_tests.cpp.o
 
 # target to build an object file
 ip_tests.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/ip_tests.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/ip_tests.cpp.o
 .PHONY : ip_tests.cpp.o
 
 ip_tests.i: ip_tests.cpp.i
@@ -365,7 +365,7 @@ ip_tests.i: ip_tests.cpp.i
 
 # target to preprocess a source file
 ip_tests.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/ip_tests.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/ip_tests.cpp.i
 .PHONY : ip_tests.cpp.i
 
 ip_tests.s: ip_tests.cpp.s
@@ -374,7 +374,7 @@ ip_tests.s: ip_tests.cpp.s
 
 # target to generate assembly for a file
 ip_tests.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/ip_tests.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/ip_tests.cpp.s
 .PHONY : ip_tests.cpp.s
 
 ip_tests2.o: ip_tests2.cpp.o
@@ -383,7 +383,7 @@ ip_tests2.o: ip_tests2.cpp.o
 
 # target to build an object file
 ip_tests2.cpp.o:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/ip_tests2.cpp.o
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/ip_tests2.cpp.o
 .PHONY : ip_tests2.cpp.o
 
 ip_tests2.i: ip_tests2.cpp.i
@@ -392,7 +392,7 @@ ip_tests2.i: ip_tests2.cpp.i
 
 # target to preprocess a source file
 ip_tests2.cpp.i:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/ip_tests2.cpp.i
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/ip_tests2.cpp.i
 .PHONY : ip_tests2.cpp.i
 
 ip_tests2.s: ip_tests2.cpp.s
@@ -401,7 +401,7 @@ ip_tests2.s: ip_tests2.cpp.s
 
 # target to generate assembly for a file
 ip_tests2.cpp.s:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/ip_tests2.cpp.s
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/ip_tests2.cpp.s
 .PHONY : ip_tests2.cpp.s
 
 # Help Target
@@ -451,6 +451,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/charleshan/Lab2_2020/CompNet-Lab2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /media/data/home/charleshan/Lab2_2020/CompNet-Lab2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

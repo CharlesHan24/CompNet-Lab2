@@ -48,17 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /root/CompNet-Lab2
+CMAKE_SOURCE_DIR = /media/data/home/charleshan/Lab2_2020/CompNet-Lab2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/CompNet-Lab2
-=======
-CMAKE_SOURCE_DIR = /root/Lab2_2020/CompNet-Lab2
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Lab2_2020/CompNet-Lab2
->>>>>>> f91daa97d12fb8d058aa352e7e4b6efb0a53d183
+CMAKE_BINARY_DIR = /media/data/home/charleshan/Lab2_2020/CompNet-Lab2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +80,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/data/home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles /media/data/home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/data/home/charleshan/Lab2_2020/CompNet-Lab2/CMakeFiles 0
+.PHONY : all
+
 # The main clean target
 clean:
 	$(MAKE) -f CMakeFiles/Makefile2 clean
+.PHONY : clean
 
 # The main clean target
 clean/fast: clean
@@ -125,6 +124,58 @@ protocol_stack/fast:
 .PHONY : protocol_stack/fast
 
 #=============================================================================
+# Target rules for targets named ip_tests2
+
+# Build rule for target.
+ip_tests2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ip_tests2
+.PHONY : ip_tests2
+
+# fast build rule for target.
+ip_tests2/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/ip_tests2.dir/build.make test_scripts/CMakeFiles/ip_tests2.dir/build
+.PHONY : ip_tests2/fast
+
+#=============================================================================
+# Target rules for targets named echo_server_multi
+
+# Build rule for target.
+echo_server_multi: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server_multi
+.PHONY : echo_server_multi
+
+# fast build rule for target.
+echo_server_multi/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/echo_server_multi.dir/build.make test_scripts/CMakeFiles/echo_server_multi.dir/build
+.PHONY : echo_server_multi/fast
+
+#=============================================================================
+# Target rules for targets named echo_client
+
+# Build rule for target.
+echo_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_client
+.PHONY : echo_client
+
+# fast build rule for target.
+echo_client/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/echo_client.dir/build.make test_scripts/CMakeFiles/echo_client.dir/build
+.PHONY : echo_client/fast
+
+#=============================================================================
+# Target rules for targets named echo_server
+
+# Build rule for target.
+echo_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/echo_server.dir/build.make test_scripts/CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+#=============================================================================
 # Target rules for targets named eth_tests
 
 # Build rule for target.
@@ -149,6 +200,73 @@ eth_tests2: cmake_check_build_system
 eth_tests2/fast:
 	$(MAKE) -f test_scripts/CMakeFiles/eth_tests2.dir/build.make test_scripts/CMakeFiles/eth_tests2.dir/build
 .PHONY : eth_tests2/fast
+
+#=============================================================================
+# Target rules for targets named ip_tests
+
+# Build rule for target.
+ip_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ip_tests
+.PHONY : ip_tests
+
+# fast build rule for target.
+ip_tests/fast:
+	$(MAKE) -f test_scripts/CMakeFiles/ip_tests.dir/build.make test_scripts/CMakeFiles/ip_tests.dir/build
+.PHONY : ip_tests/fast
+
+src/BOBHash.o: src/BOBHash.cc.o
+
+.PHONY : src/BOBHash.o
+
+# target to build an object file
+src/BOBHash.cc.o:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/BOBHash.cc.o
+.PHONY : src/BOBHash.cc.o
+
+src/BOBHash.i: src/BOBHash.cc.i
+
+.PHONY : src/BOBHash.i
+
+# target to preprocess a source file
+src/BOBHash.cc.i:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/BOBHash.cc.i
+.PHONY : src/BOBHash.cc.i
+
+src/BOBHash.s: src/BOBHash.cc.s
+
+.PHONY : src/BOBHash.s
+
+# target to generate assembly for a file
+src/BOBHash.cc.s:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/BOBHash.cc.s
+.PHONY : src/BOBHash.cc.s
+
+src/arp.o: src/arp.cc.o
+
+.PHONY : src/arp.o
+
+# target to build an object file
+src/arp.cc.o:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/arp.cc.o
+.PHONY : src/arp.cc.o
+
+src/arp.i: src/arp.cc.i
+
+.PHONY : src/arp.i
+
+# target to preprocess a source file
+src/arp.cc.i:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/arp.cc.i
+.PHONY : src/arp.cc.i
+
+src/arp.s: src/arp.cc.s
+
+.PHONY : src/arp.s
+
+# target to generate assembly for a file
+src/arp.cc.s:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/arp.cc.s
+.PHONY : src/arp.cc.s
 
 src/common.o: src/common.cc.o
 
@@ -204,6 +322,33 @@ src/device.cc.s:
 	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/device.cc.s
 .PHONY : src/device.cc.s
 
+src/ip.o: src/ip.cc.o
+
+.PHONY : src/ip.o
+
+# target to build an object file
+src/ip.cc.o:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/ip.cc.o
+.PHONY : src/ip.cc.o
+
+src/ip.i: src/ip.cc.i
+
+.PHONY : src/ip.i
+
+# target to preprocess a source file
+src/ip.cc.i:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/ip.cc.i
+.PHONY : src/ip.cc.i
+
+src/ip.s: src/ip.cc.s
+
+.PHONY : src/ip.s
+
+# target to generate assembly for a file
+src/ip.cc.s:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/ip.cc.s
+.PHONY : src/ip.cc.s
+
 src/kernel.o: src/kernel.cc.o
 
 .PHONY : src/kernel.o
@@ -258,6 +403,60 @@ src/packetio.cc.s:
 	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/packetio.cc.s
 .PHONY : src/packetio.cc.s
 
+src/socket.o: src/socket.cc.o
+
+.PHONY : src/socket.o
+
+# target to build an object file
+src/socket.cc.o:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/socket.cc.o
+.PHONY : src/socket.cc.o
+
+src/socket.i: src/socket.cc.i
+
+.PHONY : src/socket.i
+
+# target to preprocess a source file
+src/socket.cc.i:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/socket.cc.i
+.PHONY : src/socket.cc.i
+
+src/socket.s: src/socket.cc.s
+
+.PHONY : src/socket.s
+
+# target to generate assembly for a file
+src/socket.cc.s:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/socket.cc.s
+.PHONY : src/socket.cc.s
+
+src/tcp.o: src/tcp.cc.o
+
+.PHONY : src/tcp.o
+
+# target to build an object file
+src/tcp.cc.o:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/tcp.cc.o
+.PHONY : src/tcp.cc.o
+
+src/tcp.i: src/tcp.cc.i
+
+.PHONY : src/tcp.i
+
+# target to preprocess a source file
+src/tcp.cc.i:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/tcp.cc.i
+.PHONY : src/tcp.cc.i
+
+src/tcp.s: src/tcp.cc.s
+
+.PHONY : src/tcp.s
+
+# target to generate assembly for a file
+src/tcp.cc.s:
+	$(MAKE) -f CMakeFiles/protocol_stack.dir/build.make CMakeFiles/protocol_stack.dir/src/tcp.cc.s
+.PHONY : src/tcp.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,20 +466,40 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... protocol_stack"
 	@echo "... edit_cache"
+	@echo "... ip_tests2"
+	@echo "... echo_server_multi"
+	@echo "... echo_client"
+	@echo "... echo_server"
 	@echo "... eth_tests"
 	@echo "... eth_tests2"
+	@echo "... ip_tests"
+	@echo "... src/BOBHash.o"
+	@echo "... src/BOBHash.i"
+	@echo "... src/BOBHash.s"
+	@echo "... src/arp.o"
+	@echo "... src/arp.i"
+	@echo "... src/arp.s"
 	@echo "... src/common.o"
 	@echo "... src/common.i"
 	@echo "... src/common.s"
 	@echo "... src/device.o"
 	@echo "... src/device.i"
 	@echo "... src/device.s"
+	@echo "... src/ip.o"
+	@echo "... src/ip.i"
+	@echo "... src/ip.s"
 	@echo "... src/kernel.o"
 	@echo "... src/kernel.i"
 	@echo "... src/kernel.s"
 	@echo "... src/packetio.o"
 	@echo "... src/packetio.i"
 	@echo "... src/packetio.s"
+	@echo "... src/socket.o"
+	@echo "... src/socket.i"
+	@echo "... src/socket.s"
+	@echo "... src/tcp.o"
+	@echo "... src/tcp.i"
+	@echo "... src/tcp.s"
 .PHONY : help
 
 
