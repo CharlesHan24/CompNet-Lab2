@@ -1,0 +1,10 @@
+# ns1
+./ip_tests result0.txt 0 10.100.5.2 veth1-2 veth1-3
+# ns2
+./ip_tests result1.txt 1 veth2-1 veth2-4
+# ns3
+./ip_tests result2.txt 1 veth3-1 veth3-4
+# ns4
+./ip_tests result3.txt 1 veth4-2 veth4-3 veth4-5
+# ns5
+./ip_tests result4.txt 1 veth5-4

@@ -1,0 +1,5 @@
+# In ns2, echo server:
+./echo_server result2.txt veth2-1
+
+# In ns1, echo client:
+python3 client_run.py
